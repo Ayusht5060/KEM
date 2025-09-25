@@ -1,16 +1,16 @@
-<<<<<<< HEAD
-# React + Vite
+# RoboTutor - AI Learning Companion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**RoboTutor** is an intelligent, interactive robotic tutor designed to help students who are struggling to keep up with their peers. This robot acts as a learning companion, providing personalized support and reminders, helping students reinforce concepts and improve their understanding over time.
 
-Currently, two official plugins are available:
+## Features
+- **Personalized Assistance:** Adapts to each student’s learning pace and style.
+- **Interactive Learning:** Uses speech, visuals, and gestures to engage students.
+- **Repeat Reminders:** Reinforces lessons whenever students ask or need help.
+- **Multi-Modal Communication:** Combines voice, text, and visual aids for effective teaching.
+- **Companion Mode:** Encourages consistent learning and helps students stay on track.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- **Hardware:** Robot chassis, motors, sensors, speakers, and microcontroller/PCB interface.
+- **Software:** Python, AI/ML libraries, speech recognition, and synthesis modules.
+- **AI:** Adaptive learning algorithms to track progress and provide personalized responses.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# KEM
->>>>>>> 56d0ffc6c06547ee91d20199ac554cc8caa5542b
