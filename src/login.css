@@ -1,0 +1,136 @@
+/* Full screen center layout */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Glassmorphism login box */
+.login-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  color: white;
+  width: 320px;
+  animation: slideUp 0.8s ease-out;
+}
+
+/* Input group animation */
+.input-group {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  padding-left: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: white;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Floating label when typing */
+.input-group input:focus,
+.input-group input:not(:placeholder-shown) {
+  border-color: #4e9eff;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 8px;
+  font-size: 12px;
+  color: #4e9eff;
+  background-color: #243b55;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+/* Modern login button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #4e9eff, #6f86ff);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #6f86ff, #4e9eff);
+  transform: scale(1.03);
+}
+
+/* Sign-up text */
+.signup-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.signup-link a {
+  color: #4e9eff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.error-message {
+  color: #ff4d4f;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-align: center;
+}
+

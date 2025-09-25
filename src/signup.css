@@ -1,0 +1,180 @@
+/* Container with animated gradient background */
+.signup-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #141e30, #243b55, #1e3c72, #2a5298);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  padding: 16px; /* Prevents content from touching edges */
+  box-sizing: border-box;
+}
+
+/* Glassmorphic box with entrance animation */
+.signup-box {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  width: 420px;
+  max-width: 100%; /* ✅ prevents overflow on small screens */
+  color: white;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 0.8s ease forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Input field styling */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background: none;
+  outline: none;
+  color: white;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  background: #243b55; /* ✅ blends with background */
+  padding: 0 5px;
+  color: #aaa;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -8px;
+  font-size: 13px;
+  color: #00c9ff;
+  background: #141e30;
+  border-radius: 4px;
+  padding: 0 4px;
+}
+
+/* Password eye toggle */
+.toggle-eye {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #00c9ff;
+  user-select: none;
+}
+
+/* Button styling with hover animation */
+.signup-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+  border: none;
+  border-radius: 8px;
+  color: #1a1a1a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 1rem;
+}
+
+.signup-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(255, 154, 158, 0.4);
+}
+
+/* Login link */
+.login-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.link-text {
+  color: #ffd166;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.link-text:hover {
+  color: #fff;
+}
+
+/* Background animation */
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Avatar select */
+.selected-avatar {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.avatar-label {
+  color: white;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.avatar-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+}
+
+/* 📱 Responsive tweaks */
+@media (max-width: 600px) {
+  .signup-box {
+    padding: 24px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .signup-btn {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .selected-avatar {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,46 @@
+.page-container {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #1e2a34;
+  min-height: 100vh;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #4a90e2;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-container textarea {
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  resize: none;
+  min-height: 100px;
+}
+
+.form-container button {
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #7b4ae2, #4a90e2);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
